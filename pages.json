@@ -6,6 +6,7 @@
                 "navigationBarTitleText": ""
             }
         },
+      
         {
             "path": "pages/cate/cate",
             "style": {
@@ -23,6 +24,30 @@
             "style": {
                 "navigationBarTitleText": ""
             }
+        }
+        // ,
+        // {
+        //     "path": "subpkg/goods_detail/goods_detail",
+        //     "style": {
+        //         "navigationBarTitleText": ""
+        //     }
+        // }
+      
+    ],
+    "subPackages": [
+        {
+            "root": "subpkg",
+            "pages": [{
+                "path":"goods_detail/goods_detail",
+                "style": {}
+            },
+            {
+                "path": "goods_list/goods_list",
+                "style": {
+                    "navigationBarTitleText": ""
+                }
+            }
+            ]
         }
     ],
     "globalStyle": {
