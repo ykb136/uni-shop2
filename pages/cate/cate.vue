@@ -1,4 +1,8 @@
 <template>
+    <view>
+        <!-- 使用自定义搜索组件 -->
+        <!-- <my-search :bgcolor="'pink'" :radius="3"></my-search> -->
+        <my-search @click="gotoSearch"></my-search>
     <view class="scroll-view-container">
         <!-- 左滑动 -->
         <scroll-view scroll-y="true" :style="{height: wh+'px'}" class="left-scroll-view">
@@ -25,6 +29,7 @@
         
        </scroll-view>
     </view>
+    </view>
 </template>
 
 <script>
@@ -42,7 +47,7 @@
         onLoad(){
             const sysInfo=uni.getSystemInfoSync()
             console.log(sysInfo)
-            this.wh=sysInfo.windowHeight
+            this.wh=sysInfo.windowHeight-50
             this.getCateList()
         },
         methods:{
@@ -71,6 +76,11 @@
             gotogoodsList(item){
                 uni.navigateTo({
                     url:'/subpkg/goods_list/goods_list?cid='+item.cat_id
+                })
+            },
+            gotoSearch(){
+                uni.navigateTo({
+                    url:'/subpkg/search/search'
                 })
             }
         }
