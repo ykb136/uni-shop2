@@ -44,7 +44,10 @@
             {
                 "path": "goods_list/goods_list",
                 "style": {
-                    "navigationBarTitleText": ""
+                    "navigationBarTitleText": "",
+                    "onReachBottomDistance": 150,
+                    "enablePullDownRefresh": true,
+                    "backgroundColor": "#F8F8F8"
                 }
             },
             {
